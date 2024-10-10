@@ -3,27 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PW Gulf Online Audit Dashboard</title>
+    <title>Redirecting to PW Gulf Online Audit Dashboard</title>
     <style>
         body {
-            margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #029a58;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #029a58;
+            margin: 0;
+            color: white;
+            text-align: center;
         }
-        iframe {
-            width: 100%;
-            height: 100vh;
-            border: none;
+        .container {
+            max-width: 600px;
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(12, 184, 104, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <h1>Redirecting...</h1>
+        <p>If you are not redirected automatically, <a id="redirect-link" href="#">click here</a>.</p>
+    </div>
 
-    <iframe src="https://script.google.com/a/macros/pw.live/s/AKfycbwOYaGR8LLEIKsuJzeJvcyeLPMdOOAJJWal75tBV5XiQB8kI17MMkIxbSm9Z-66qkPk1Q/exec" title="PW Gulf Online Audit Dashboard"></iframe>
+    <script>
+        // Set the Google Apps Script Web App URL
+        const scriptURL = "https://script.google.com/a/macros/pw.live/s/AKfycbwOYaGR8LLEIKsuJzeJvcyeLPMdOOAJJWal75tBV5XiQB8kI17MMkIxbSm9Z-66qkPk1Q/exec";
 
+        // Redirect after 3 seconds
+        setTimeout(() => {
+            window.location.href = scriptURL;
+        }, 3000);
+
+        // Update link for manual click
+        document.getElementById('redirect-link').href = scriptURL;
+    </script>
 </body>
 </html>
