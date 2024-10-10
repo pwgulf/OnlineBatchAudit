@@ -73,32 +73,22 @@
     const loginForm = document.getElementById('loginForm');
     const errorMessage = document.getElementById('errorMessage');
 
+    // Hardcoded credentials
+    const validEmail = "aditya.kumar3@pw.live";
+    const validPassword = "Gulf@2055";
+
     loginForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
 
-        fetch("https://script.google.com/a/macros/pw.live/s/AKfycbwOYaGR8LLEIKsuJzeJvcyeLPMdOOAJJWal75tBV5XiQB8kI17MMkIxbSm9Z-66qkPk1Q/exec", {
-            method: 'POST',
-            mode: 'cors',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ email: email, password: password })
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                window.location.href = 'dashboard.html'; // Redirect to dashboard page
-            } else {
-                errorMessage.style.display = 'block';
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
+        // Check if the entered email and password match the hardcoded credentials
+        if (email === validEmail && password === validPassword) {
+            window.location.href = 'index.html'; // Redirect to dashboard page
+        } else {
             errorMessage.style.display = 'block';
-        });
+        }
     });
 </script>
 
